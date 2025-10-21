@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>taman.berpustaka</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<style>
+    .text-truncate-3 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        white-space: normal;
+    }
+    .card {
+        border: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+    }
+    .filter-buku a {
+        text-decoration: none;
+    }
+    .filter-buku a:hover {
+    text-decoration: underline;
+    color: #0d6efd;
+    }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: #fff;
+
+}
+
+</style>
+</head>
+<body style="padding-top: 50px;">
+    <div class="navigasi">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top mx-3 my-3 rounded-5">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="index.html">taman.berpustaka</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Today's Deals</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Sell</a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                <li><a class="dropdown-item" href="#">Redeem Gift card</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="">Our Forum</a></li>
+            </ul>
+            </li>
+        </ul>
+        <form class="d-flex flex-grow-1 mx-3" role="search">
+            <input class="form-control me-2 flex-grow-1" type="search" placeholder="Search" aria-label="Search" style="min-width: 0;" id="searchInput">
+            <button class="btn btn-outline-success" type="submit" id="searchButton">Search</button>
+        </form>
+        <div class="nav-item ms-2 me-3">
+            <a class="nav-link" href="pembelian.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        </div>
+    </div>
+</nav>
+</div>
+<div class="bukan">
+<div id="carouselExampleAutoplaying" class="carousel slide rounded-5 overflow-hidden mx-5 my-5" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://media.gettyimages.com/id/2216593338/video/super-sale-90-discount-banner-with-shopping-bags-on-blue-background.jpg?s=640x640&k=20&c=kixxstf6OtqnGMU0BbXU6xtDExLK_JMrvXLIrtWCmgI=" class="d-block w-100" style="height:320px; object-fit:cover;" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://media.gettyimages.com/id/1302408358/vector/spring-sale-design-for-advertising-banners-leaflets-and-flyers.jpg?s=612x612&w=0&k=20&c=sCbvIABrZNC6Ivvg5ew7aelKRqbPhlRtZ2dCJ2hXSUI=" class="d-block w-100" style="height:320px; object-fit:cover;" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://media.gettyimages.com/id/872043288/vector/merry-christmas-sale-banner-with-balls-and-icons-pattern-vector-illustration-flyer-invitation.jpg?s=612x612&w=0&k=20&c=52GfHEqy_AlLllz2Ee1D_yfPCZ8UptaDfgrpkBFAcKE=" class="d-block w-100" style="height:320px; object-fit:cover;" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="container mt-3 rounded">
+    <div class="row">
+        <div class="col-sm-3">
+            <h5 class="fw-bold mt-4 ms-2">Department</h5>
+             <div class="filter-buku ms-4">
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <div class="form-check">
+                            <input class="form-check-input filter-checkbox" type="checkbox" value="fiksi" id="checkFiksi">
+                            <label class="form-check-label" for="checkFiksi">
+                                <a href="#" class="text-dark">Fiksi</a>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="mb-2">
+                        <div class="form-check">
+                            <input class="form-check-input filter-checkbox" type="checkbox" value="nonFiksi" id="checkNonFiksi">
+                            <label class="form-check-label" for="checkNonFiksi">
+                                <a href="#" class="text-dark">Non Fiksi</a>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="mb-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Komik" id="checkKomik">
+                            <label class="form-check-label" for="checkKomik">
+                                <a href="#" class="text-dark">Komik</a>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="mb-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Biografi" id="checkBiografi">
+                            <label class="form-check-label" for="checkBiografi">
+                                <a href="#" class="text-dark">Biografi</a>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="mb-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Ensiklopedia" id="checkEnsiklopedia">
+                            <label class="form-check-label" for="checkEnsiklopedia">
+                                <a href="#" class="text-dark">Ensiklopedia</a>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="mb-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Majalah" id="checkMajalah">
+                            <label class="form-check-label" for="checkMajalah">
+                                <a href="#" class="text-dark">Majalah</a>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="mb-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Jurnal" id="checkJurnal">
+                            <label class="form-check-label" for="checkJurnal">
+                                <a href="#" class="text-dark">Jurnal</a>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+
+        </div>
+    </div>
+    <div class="col-md-9" id="bookListContainer">
+        <div class="row">
+            <div class="col-md-4 mb-4 book-card fiksi">
+                <a href="detail.html" class="text-decoration-none text-dark d-block">
+                <div class="card">
+                <img src="https://m.media-amazon.com/images/I/81fNLwGIv1L._SY522_.jpg" class="card-img-top w-50 d-block mt-2 mx-auto" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Seven Summers</h5>
+                    <p class="card-text text-muted mb-1 small">Paige Toon</p>
+                    <span class="badge text-bg-secondary">Fiksi</span>
+                    <p class="card-text text-truncate-3">Liv and Finn meet working in a bar on the rugged Cornish coastline, their futures full of promise. When a night of passion ends in devastating tragedy they are bound together inextricably. But Finn's life is in LA with his band, and Liv's is in Cornwall with her family - so they make a promise. Finn will return every year, and if they are single they will spend the summer together..</p>
+                    <a href="#" class="btn btn-primary fw-bold mt-1">4/5 <i class="bi bi-star-fill"></i></a>
+                </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4 book-card nonfiksi">
+                <a href="details.html" class="text-decoration-none text-dark d-block">
+                <div class="card">
+                <img src="https://m.media-amazon.com/images/I/61uYp1qd3WL._SY522_.jpg" class="card-img-top w-50 d-block mx-auto" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">How Countries Go Broke</h5>
+                    <p class="card-text text-muted mb-1 small">Ray Dalio</p>
+                    <span class="badge text-bg-secondary">Nonfiksi</span>
+                    <p class="card-text text-truncate-3">Do big government debts threaten our collective well-being? Are there limits to debt growth? Can a big, important reserve currency country like the United States really go broke – and what would that look like?</p>
+                    <a href="#" class="btn btn-primary fw-bold mt-1">5/5 <i class="bi bi-star-fill"></i></a>
+                </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4 book-card nonfiksi">
+                <a href="detail.html" class="text-decoration-none text-dark d-block">
+                <div class="card">
+                <img src="https://m.media-amazon.com/images/I/71HHy9o8xZL._SY522_.jpg" class="card-img-top w-50 d-block mt-2 mx-auto" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">The 7 Habits of Highly Effective People</h5>
+                    <p class="card-text text-muted mb-1 small">Stephen R. Covey</p>
+                    <span class="badge text-bg-secondary">Nonfiksi</span>
+                    <p class="card-text text-truncate-3">One of the most inspiring and impactful books ever written, Dr. Stephen Covey's The 7 Habits of Highly Effective People has captivated readers for over thirty years and sold over 40 million copies internationally―transforming the lives of presidents and CEOs, educators, parents, and students. Now you too can learn critical lessons about the habits of successful people and enrich your life...</p>
+                    <a href="#" class="btn btn-primary fw-bold mt-1">3/5 <i class="bi bi-star-fill"></i></a>
+                </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4 book-card nonfiksi">
+                <a href="detail.html" class="text-decoration-none text-dark d-block">
+                <div class="card">
+                <img src="https://m.media-amazon.com/images/I/712ikr-hkML._SY522_.jpg" class="card-img-top w-50 d-block mt-2 mx-auto" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Surrounded by Idiots</h5>
+                    <p class="card-text text-muted mb-1 small">Thomas Erikso</p>
+                    <span class="badge text-bg-secondary">Nonfiksi</span>
+                    <p class="card-text text-truncate-3">Do you ever think you're the only one making any sense? Have you ever tried to reason with your partner with disastrous results? Do long, rambling answers drive you crazy? Does your colleague's abrasive manner get your back up?..</p>
+                    <a href="#" class="btn btn-primary fw-bold mt-1">4/5 <i class="bi bi-star-fill"></i></a>
+                </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4 book-card biografi">
+                <a href="detail.html" class="text-decoration-none text-dark d-block">
+                <div class="card">
+                <img src="https://m.media-amazon.com/images/I/81gKitrhUWL._SY522_.jpg" class="card-img-top w-50 d-block mt-2 mx-auto" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Living the Beatles Legend</h5>
+                    <p class="card-text text-muted mb-1 small">Kenneth Womack</p>
+                    <span class="badge text-bg-secondary">Biography</span>
+                    <p class="card-text text-truncate-3">A towering figure in horn-rimmed glasses, Malcolm ‘Mal’ Evans was an invaluable member of the Beatles’ inner circle. Serving as their long-time roadie, personal assistant and protector, he was a sometime lyricist, occasional performer and regular fixer at the height of the group’s fame and beyond..</p>
+                    <a href="#" class="btn btn-primary fw-bold mt-1">3/5 <i class="bi bi-star-fill"></i></a>
+                </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4 book-card ensiklopedia">
+                <a href="detail.html" class="text-decoration-none text-dark d-block">
+                <div class="card">
+                <img src="https://m.media-amazon.com/images/I/51nkYe5oGnL._SX342_SY445_QL70_ML2_.jpg" class="card-img-top w-50 d-block mt-2 mx-auto" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Knowledge Encyclopedia History!</h5>
+                    <p class="card-text text-muted mb-1 small">DK Knowledge</p>
+                    <span class="badge text-bg-secondary">Ensiklopedia</span>
+                    <p class="card-text text-truncate-3">Forming part of a fantastic series of kid's educational books, this bold and brilliant kid's encyclopedia uses ground-breaking CGI imagery to reveal the world as you've never seen it before. Informative, diverse in subject matter, easy-to-read and brimming with beautiful graphics, young learners can explore the incredibly detailed .</p>
+                    <a href="#" class="btn btn-primary fw-bold mt-1">4/5 <i class="bi bi-star-fill"></i></a>
+                </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4 book-card majalah">
+                <a href="detail.html" class="text-decoration-none text-dark d-block">
+                <div class="card">
+                <img src="https://m.media-amazon.com/images/I/61g5Y7ZwBaL._AC_UY327_FMwebp_QL65_.jpg" class="card-img-top w-50 d-block mt-2 mx-auto" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Playboy First Magazine</h5>
+                    <p class="card-text text-muted mb-1 small">Playboy</p>
+                    <span class="badge text-bg-secondary">Majalah</span>
+                    <p class="card-text text-truncate-3">Step back into the golden age of glamour with the debut issue of Playboy Magazine, December 1953, featuring the unforgettable Marilyn Monroe as the very first Playmate of the Month. Born on June 1, 19 they are bound together inextricably. But Finn's life is in LA with his band, and Liv's is in Cornwall with her family - so they make a promise. Finn will return every year, and if they are single they will spend the summer together..</p>
+                    <a href="#" class="btn btn-primary fw-bold mt-1">5/5 <i class="bi bi-star-fill"></i></a>
+                </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4 book-card nonfiksi">
+                <a href="detail.html" class="text-decoration-none text-dark d-block">
+                <div class="card">
+                <img src="https://m.media-amazon.com/images/I/31dU5sjvz8L._SY445_SX342_QL70_ML2_.jpg" class="card-img-top w-50 d-block mt-2 mx-auto" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">The 48 Laws Of Power</h5>
+                    <p class="card-text text-muted mb-1 small">Robert Greene</p>
+                    <span class="badge text-bg-secondary">Nonfiksi</span>
+                    <p class="card-text text-truncate-3">Amoral, cunning, ruthless, and instructive, this piercing work distils three thousand years of the history of power into forty-eight well-explicated laws. As attention-grabbing in its design as it is in its content, this bold volume outlines the laws of power in their unvarnished essence, synthesizing the philosophies of Machiavelli, Sun-tzu, Carl von Clausewitz, and other great thinkers., their futures full of promise. When a night of passion ends in devastating tragedy they are bound together inextricably. But Finn's life is in LA with his band, and Liv's is in Cornwall with her family - so they make a promise. Finn will return every year, and if they are single they will spend the summer together..</p>
+                    <a href="#" class="btn btn-primary fw-bold mt-1">5/5 <i class="bi bi-star-fill"></i></a>
+                </div>
+                </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<footer class="bg-white mt-5">
+    <div class="container py-4">
+
+        <div class="row mb-4 border-bottom pb-3" style="border-color: rgba(0, 0, 0, 0.1) !important;">
+            <div class="col-md-4">
+                <div class="site-logo">
+                    <a href="#" class="text-dark h5 text-decoration-none fw-bold">taman.berpustaka</a>
+                </div>
+            </div>
+            <div class="col-md-8 text-md-end">
+                <ul class="list-unstyled social-icons d-inline-flex">
+                    <li><a href="#" class="btn btn-outline-dark btn-social-light me-2"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" class="btn btn-outline-dark btn-social-light me-2"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" class="btn btn-outline-dark btn-social-light me-2"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" class="btn btn-outline-dark btn-social-light"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <h6 class="text-uppercase mb-3 footer-title-dark">Company</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-dark footer-link-dark">About Us</a></li>
+                    <li><a href="#" class="text-dark footer-link-dark">Our Services</a></li>
+                    <li><a href="#" class="text-dark footer-link-dark">Privacy Policy</a></li>
+                    <li><a href="#" class="text-dark footer-link-dark">Affiliate Program</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <h6 class="text-uppercase mb-3 footer-title-dark">Get Help</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-dark footer-link-dark">FAQ</a></li>
+                    <li><a href="#" class="text-dark footer-link-dark">Shipping</a></li>
+                    <li><a href="#" class="text-dark footer-link-dark">Returns</a></li>
+                    <li><a href="#" class="text-dark footer-link-dark">Order Status</a></li>
+                    <li><a href="#" class="text-dark footer-link-dark">Payment Options</a></li>
+                </ul>
+            </div>
+
+            </div>
+
+        <div class="row">
+            <div class="col text-center">
+                <div class="copyright pt-3 border-top" style="border-color: rgba(0, 0, 0, 0.1) !important;">
+                    <p class="mb-0"><small>
+                        © 2025 Copyright: <a class="text-dark text-decoration-none" href="#">taman.berpustaka.com</a>
+                    </small></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+</footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script>
+    const checkboxes = document.querySelectorAll('.form-check-input');
+    const bookCards = document.querySelectorAll('.book-card');
+    const searchInput = document.getElementById('searchInput');
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    if (searchInput) {
+        searchInput.addEventListener('keyup', runFilters);
+
+        const searchForm = searchInput.closest('form');
+        if (searchForm) {
+            searchForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                runFilters();
+            });
+        }
+    }
+
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', runFilters);
+    });
+
+    function runFilters() {
+        const selectedFilters = Array.from(checkboxes)
+            .filter(i => i.checked)
+            .map(i => i.value.toLowerCase().replace(/\s/g, ''));
+
+        const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+
+        bookCards.forEach(card => {
+            const cardClasses = Array.from(card.classList).map(cls => cls.toLowerCase());
+
+            const matchesCheckbox = selectedFilters.length === 0 || selectedFilters.some(filter =>
+                cardClasses.includes(filter)
+            );
+
+            const cardText = card.textContent.toLowerCase();
+            const matchesSearch = cardText.includes(searchTerm);
+
+            if (matchesCheckbox && matchesSearch) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    runFilters();
+});
+</script>
+</html>
