@@ -1,4 +1,3 @@
-<img width="1894" height="994" alt="Screenshot 2025-10-21 175408" src="https://github.com/user-attachments/assets/0c32a04d-847c-4444-80e6-c996fcd7595a" /># taman.berpustaka_UTS_PBP
 Hasil Pengerjaan UTS PBP
 Taman Berpustaka (Front-End Toko Buku)
 Taman Berpustaka adalah proyek midsemester matkul PBP yang mensimulasikan fungsionalitas inti dari sebuah website e-commerce toko buku online. Proyek ini menampilkan halaman daftar produk dengan filter dinamis, halaman detail produk dengan kalkulasi harga, dan halaman checkout dengan simulasi proses pembayaran.
