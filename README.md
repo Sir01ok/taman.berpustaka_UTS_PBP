@@ -1,5 +1,9 @@
-## Hasil Pengerjaan UTS PBP
-### Taman Berpustaka
+# Hasil Pengerjaan UTS PBP
+NAMA : SYAUQI IHSAN RAMADHAN
+NIM : 24051204110
+Kelas : TI24D
+
+## Taman Berpustaka
 Taman Berpustaka adalah proyek midsemester matkul PBP yang mensimulasikan fungsionalitas inti dari sebuah website e-commerce toko buku online. Proyek ini menampilkan halaman daftar produk dengan filter dinamis, halaman detail produk dengan kalkulasi harga, dan halaman checkout dengan simulasi proses pembayaran.
 
 Proyek ini dibangun murni menggunakan HTML, CSS, dan JavaScript (vanilla), dengan framework Bootstrap untuk tata letak dan komponen yang responsif.
@@ -21,6 +25,10 @@ __^ Page 2 Detail ^__
 __^ Page 3 Checkout ^__
 
 __Link Penjelasan Kode Youtube:__
+
+[![Watch the video](https://img.youtube.com/vi/E1MXhweAh0o/maxresdefault.jpg)](https://youtu.be/E1MXhweAh0o)
+
+### [Penjelasan Kode ^^ :](https://youtu.be/E1MXhweAh0o)
 
 
 ## Fitur Utama
