@@ -34,7 +34,7 @@ __Link Penjelasan Kode Youtube:__
 ## Fitur Utama
 Proyek ini dibagi menjadi tiga halaman utama dengan fitur-fitur berikut:
 
-1. Halaman Utama (index.html)
+### 1. Halaman Utama (index.html)
    
 - Galeri Produk: Menampilkan daftar buku dalam tata letak card (kartu) yang responsif.
 - Filter Kategori: Pengguna dapat memfilter buku yang ditampilkan berdasarkan kategori (Fiksi, Non Fiksi, Biografi, dll) menggunakan checkbox.
@@ -42,7 +42,7 @@ Proyek ini dibagi menjadi tiga halaman utama dengan fitur-fitur berikut:
 - Filter Gabungan: Fitur pencarian dan filter kategori dapat bekerja secara bersamaan.
 - Carousel: Komponen carousel Bootstrap untuk menampilkan promo atau highlight.
 
-2. Halaman Detail (details.html)
+### 2. Halaman Detail (details.html)
    
 - Informasi Rinci: Menampilkan detail satu buku, termasuk sinopsis, penulis, dan rating.
 - Tombol "Read More": Menyembunyikan sinopsis yang panjang dan menampilkannya saat tombol diklik.
@@ -50,7 +50,7 @@ Proyek ini dibagi menjadi tiga halaman utama dengan fitur-fitur berikut:
 - Subtotal Dinamis: Harga subtotal akan otomatis diperbarui secara real-time saat kuantitas diubah.
 - Navigasi Pembelian: Tombol "Beli Langsung" dan "+ Keranjang".
 
-3. Halaman Checkout (pembelian.html)
+### 3. Halaman Checkout (pembelian.html)
    
 - Ringkasan Pesanan: Menampilkan alamat pengiriman, detail barang, dan rincian biaya (Subtotal, Ongkir, dan Total).
 - Simulasi Pembayaran: Saat tombol "Bayar" diklik, tombol akan berubah menjadi status loading ("Memproses Pembayaran...") selama 2 detik sebelum mengarahkan pengguna kembali ke halaman utama.
@@ -60,5 +60,5 @@ Proyek ini dibagi menjadi tiga halaman utama dengan fitur-fitur berikut:
 - CSS3: Untuk styling kustom, seperti efek hover pada kartu dan pemotongan teks (text-truncate).
 - Bootstrap 5.3.8: Framework CSS utama untuk layouting (grid, flex), komponen (navbar, card, carousel, button), dan responsiveness.
 - JavaScript (Vanilla JS): Event listener, filter, dan kalkulasi harga, simulasi loading pada tombol.
-- Font Awesome & Bootstrap Icons: Untuk di seluruh sites.
+- Font Awesome & Bootstrap Icons: Untuk icon di seluruh sites.
 - Google Fonts: Menggunakan font 'Outfit'.
